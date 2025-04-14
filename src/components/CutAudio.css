@@ -1,0 +1,147 @@
+.cut-audio-container {
+  position: relative;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px auto;
+  cursor: pointer;
+  height: 120px;
+  border: 4px solid #ff8c00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cut-audio-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(222, 226, 230, 0.3);
+  z-index: 2;
+  border-top: 2px solid #dee2e6;
+  border-bottom: 2px solid #dee2e6;
+  transform: none;
+}
+
+.cut-point {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #495057;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  z-index: 4;
+}
+
+.cut-point:hover, .cut-point.dragging {
+  background-color: #212529;
+}
+
+.cut-audio-section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: rgba(255, 140, 0, 0.3);
+  transform: none;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.waveform-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.audio-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.playback-position {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #ff0000;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  gap: 15px;
+}
+
+.play-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.play-button.playing {
+  color: #0066cc;
+}
+
+.cut-instructions {
+  font-size: 12px;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.clear-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-button:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.clear-button:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.tooltip {
+  font-size: 0.875rem;
+  opacity: 1 !important;
+}
+
+.tooltip .tooltip-inner {
+  background-color: #2d3748;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip .tooltip-arrow::before {
+  border-top-color: #2d3748;
+} 

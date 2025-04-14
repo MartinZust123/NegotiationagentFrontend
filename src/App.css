@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo seems to not exist/work */
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+/* seems to do nothin*/
+.read-the-docs {
+  color: #888888;
+}
+
+/* Add dark theme styles */
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.form-control, .form-select {
+  background-color: #2d2d2d !important;
+  border: 1px solid #404040 !important;
+  color: #ffffff !important;
+  transition: all 0.2s ease;
+}
+
+.form-control:hover:not(.disabled-control), 
+.form-select:hover:not(:disabled) {
+  border-color: #505050 !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #303030 !important;
+  border-color: #606060 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/*this seems useless*/
+/*
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1rem 0;
+  border-bottom: 1px solid #000000;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+*/
+
+
+/* Logo */
+.navbar-brand {
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0px;
+  margin: 20px;
+  padding: 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Translate button */
+.btn-dark {
+  background-color: #FDB515 !important;
+  border-color: #FDB515 !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 0px !important; /* Remove rounded corners */
+}
+
+/* + button hover */
+.btn-dark:hover {
+  background-color: #d09c2b !important;
+  border-color: #d09c2b !important;
+}
+
+.btn-dark:disabled {
+  background-color: #FDB515 !important;
+  border-color: #FDB515 !important;
+}
+
+.form-label {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* This part seems to do absolutely nothing */
+.form-check-input {
+  background-color: #d09c2b !important;
+  border-color: #404040 !important;
+}
+
+.form-check-input:checked {
+  background-color: #2d2d2d !important;
+  border-color: #FDB515 !important;
+}
+
+.form-check-input:focus {
+  border-color: #2d2d2d !important;
+  box-shadow: 0 0 0 0.25rem rgba(211, 84, 0, 0.25) !important;
+}
+
+/* Style the dropdown list */
+.language-dropdown {
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #2d2d2d !important;
+  border: 1px solid #404040 !important;
+  border-radius: 0px;
+  margin-top: 4px;
+  padding: 8px 0;
+}
+
+.form-check-input {
+  margin-left: 8px;
+}
+
+.form-check-label {
+  padding-left: 8px;
+}
+
+/* Add these styles */
+.language-option {
+  width: 100%;
+  cursor: pointer;
+}
+
+.language-option label {
+  width: 100%;
+  cursor: pointer;
+  padding: 8px 32px;
+  margin: -8px 0;  /* Offset the parent padding */
+}
+
+.form-check.language-option {
+  padding: 8px 0;
+}
+
+.form-check-input:focus {
+  border-color: #2d2d2d !important;
+  box-shadow: none !important;
+}
+
+/* Update the dropdown container positioning */
+.dropdown-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* Dropdown when not selected */
+.language-dropdown {
+  width: 100%;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #2d2d2d !important;
+  border: 1px solid #404040 !important;
+  border-radius: 0px;
+  margin-top: 4px;
+  padding: 8px 0;
+}
+
+.selected-languages {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  min-height: 46px; /* Add minimum height to prevent layout shift */
+}
+
+/* Update the spacing */
+.translation-input-section {
+  margin-top: 40px;
+}
+/* Dropdown when selected */
+.form-select {
+  background-color: #2d2d2d !important;
+  border: 1px solid #2d2d2d !important;
+  color: #ffffff !important;
+  font-weight: 400 !important; /* Make text inside bold */
+  transition: all 0.2s ease;
+  border-radius: 0px !important; /* Remove rounded corners */
+  height: 40px; /* Adjust height if necessary */
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0rem;
+  min-width: 32px;
+}
+
+/* seems to do nothing */
+.btn-danger {
+  background-color: #a1a1a1 !important;
+  border-color: #4e4124 !important;
+}
+
+.btn-danger:hover {
+  background-color: #a72734 !important;
+  border-color: #bd2130 !important;
+}
+
+/* plus button  */
+.target-language-button {
+  height: 40px !important; /* Same height as the dropdown */
+  min-height: 40px !important;
+  width: 39x !important; /* Make it a square like the dropdown height */
+  min-width: 39px !important;
+  background-color: #2d2d2d !important;
+  border-color: #2d2d2d !important;
+  border-radius: 0px !important; /* Remove rounded corners */
+
+  margin-top: 2.5rem;  /* Adjust this value to align with the dropdown */
+}
+
+.target-language-button2 {
+  height: 40px !important; /* Same height as the dropdown */
+  min-height: 40px !important;
+  width: 39px !important; /* Make it a square like the dropdown height */
+  min-width: 39px !important;
+  background-color: #2d2d2d !important;
+  border-color: #2d2d2d !important;
+  border-radius: 0px !important; /* Remove rounded corners */
+  margin-top: 1.5rem;  /* Adjust this value to align with the dropdown */
+}
+
+.gap-tini {
+  gap: 0.001rem !important;  /* Changed from 0.15rem to 0.05rem */
+}
+
+.target-language-dropdown {
+  margin-top: -0.5rem;  /* Adjust this negative margin to reduce space between dropdowns */
+}
+
